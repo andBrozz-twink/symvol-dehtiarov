@@ -1,0 +1,173 @@
+/* Общие настройки для всего сайта */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Шапка главной страницы */
+header {
+    text-align: center;
+    background: linear-gradient(135deg, #0057b7 50%, #ffd700 50%);
+    padding: 60px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.3);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+/* Сетка карточек на главной */
+.grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    width: calc(33.333% - 17px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 350px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.img-container {
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: auto;
+    color: #0057b7;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border: 2px solid #0057b7;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.2s;
+}
+
+.card a:hover {
+    background: #0057b7;
+    color: #fff;
+}
+
+/* Стили внутренних страниц */
+.inner-body {
+    max-width: 800px;
+}
+
+.btn-back {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #0057b7;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #0057b7;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: #fff;
+    transition: all 0.2s;
+}
+
+.btn-back:hover {
+    background: #0057b7;
+    color: #fff;
+}
+
+.content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.content h1 {
+    color: #0057b7;
+    border-bottom: 3px solid #ffd700;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.main-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.content p {
+    text-align: justify;
+    text-indent: 30px;
+    margin-bottom: 15px;
+}
+
+/* Стили блока с текстом гимна */
+.lyrics {
+    text-align: center;
+    font-style: italic;
+    background: #f9f9f9;
+    padding: 20px;
+    border-left: 4px solid #ffd700;
+    margin: 20px 0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        min-height: auto;
+    }
+    header h1 {
+        font-size: 1.8rem;
+    }
+}
